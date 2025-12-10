@@ -9,7 +9,7 @@ struct AdminData: Decodable {
     let secretMessage: String
 }
 
-struct FrontendOnlyAuthView: View {
+struct ClientSideAuthView: View {
     @State private var role: UserRole = .user
     @State private var adminData: AdminData?
     @State private var isLoading = false
@@ -18,7 +18,7 @@ struct FrontendOnlyAuthView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
 
-            Text("Frontend-Only Authorization 🔓⚠️")
+            Text("Client-Side Authorization 🔓⚠️")
                 .font(.title2).bold()
 
             Text("Current Role: \(role.rawValue)")
@@ -101,5 +101,5 @@ func fetchAdminData() async throws -> AdminData {
 }
 
 #Preview {
-    FrontendOnlyAuthView()
+    ClientSideAuthView()
 }

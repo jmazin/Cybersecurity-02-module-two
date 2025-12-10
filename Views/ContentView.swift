@@ -26,8 +26,8 @@ struct ContentView: View {
                     destination: WeatherLookupView()
                 )
                 NavigationLink(
-                    "Frontend Only Auth",
-                    destination: FrontendOnlyAuthView()
+                    "Client-Side Authorization",
+                    destination: ClientSideAuthView()
                 )
 
                 Spacer()
